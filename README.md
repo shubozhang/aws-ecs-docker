@@ -49,3 +49,8 @@ AWS ECS components
     * Auto Scaling (scale out / in)
     * Elastic Load Balancing (traffic distribution)
     * Amazon EC2 Container Registry(ECR)
+
+### Docker Basics
+* Intro to docker
+* Installation and configuration of docker
+* AWS EC2 container registry
