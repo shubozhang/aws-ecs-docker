@@ -54,3 +54,9 @@ AWS ECS components
 * Intro to docker
 * Installation and configuration of docker
 * AWS EC2 container registry
+
+* Connect to AWS EC2 instance vis Putty:
+  * Use PuttyGen to generate private ppk 
+  * Import ppk to putty session
+  * Start putty session
+  * link: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html?icmpid=docs_ec2_console
