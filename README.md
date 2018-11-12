@@ -61,8 +61,8 @@ AWS ECS components
   * Start putty session
   * link: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html?icmpid=docs_ec2_console
   
-  * Docker Basics
- 
+  
+* Docker Basics 
  ```
  To install Docker on an Amazon Linux instance:
 1) Connect:
