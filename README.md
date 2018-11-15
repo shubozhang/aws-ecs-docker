@@ -69,7 +69,8 @@ AWS ECS components
 2) Update Installed Package: sudo yum update -y
 3) Install Docker:	sudo yum install -y docker
 4) Start the Docker service:	sudo service docker start
-5) Add the ec2-user to the docker group :	sudo usermod -a -G docker ec2-user
+5) Add the ec2-user to the docker group :	sudo usermod -a -G docker ec2-user 
+// then restart session
 6) docker info
 ======================== Already Done in Previous Session ===================================================
 7) Install git:	sudo yum install -y git
