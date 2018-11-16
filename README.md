@@ -66,27 +66,30 @@ AWS ECS components
  ```
  To install Docker on an Amazon Linux instance:
 1) Connect: ssh -i key.pem username@ip-address/hostname
-2) Update Installed Package: sudo yum update -y
-3) Install Docker:	sudo yum install -y docker
-4) Start the Docker service:	sudo service docker start
-5) Add the ec2-user to the docker group :	sudo usermod -a -G docker ec2-user 
+2) Update Installed Package: $sudo yum update -y
+3) Install Docker:	$sudo yum install -y docker
+4) Start the Docker service:	$sudo service docker start
+5) Add the ec2-user to the docker group :	$sudo usermod -a -G docker ec2-user 
 // then restart session
-6) docker info
+6) $docker info
 ======================== Already Done in Previous Session ===================================================
-7) Install git:	sudo yum install -y git
-8) Clone the simple PHP application:	git clone https://github.com/awslabs/ecs-demo-php-simple-app
-9) Change directories:	cd ecs-demo-php-simple-app
-10) Examine the Dockerfile:	Cat Dockerfile
-11) Build your Docker image:	docker build -t bryan .
+7) Install git:	$sudo yum install -y git
+8) Clone the simple PHP application:	$git clone https://github.com/awslabs/ecs-demo-php-simple-app
+9) Change directories:	$cd ecs-demo-php-simple-app
+10) Examine the Dockerfile:	$Cat Dockerfile
+11) Build your Docker image:	$docker build -t bryan .
     i) Ignore the message "apache2: Cound not reliably determine the server's fully qualified domain name"
-12) Show Docker images	docker images
-13) Run the newly built image:	docker run -p 80:80 bryan
+12) Show Docker images:	$docker images
+13) Run the newly built image:	$docker run -p 80:80 bryan
 14) Test app
     i) Allow access to port 80 of EC2 instance. Edit the Security Group -> Add inbound http.
     ii) Get ec2 instance public IP: IPv4 Public IP
     iii) In browser, for example, 100.11.10.170:80
 15) After the build completes, tag your image:	
-docker tag tetranoodle:latest 133976391764.dkr.ecr.us-east-1.amazonaws.com/tetranoodle:latest 
+docker tag tetranoodle:latest 133976391764.dkr.ecr.us-east-1.amazonaws.com/bryan:latest 
 16) Run the following command to push this image 
-docker push 133976391764.dkr.ecr.us-east-1.amazonaws.com/tetranoodle:latest
+    i) Copy aws access to ec2 instance ~/.aws/config
+    ii) $aws ecr get-login --region us-east-1 --no-include-email
+    iii) Copy the return from ii) and run it
+    iv) $docker push 133976391764.dkr.ecr.us-east-1.amazonaws.com/bryan:latest
  ```
