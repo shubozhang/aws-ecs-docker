@@ -64,13 +64,13 @@ AWS ECS components
   
 * Docker Basics 
  ```
- To install Docker on an Amazon Linux instance:
+To install Docker on an Amazon Linux instance:
 1) Connect: ssh -i key.pem username@ip-address/hostname
 2) Update Installed Package: $sudo yum update -y
 3) Install Docker:	$sudo yum install -y docker
 4) Start the Docker service:	$sudo service docker start
 5) Add the ec2-user to the docker group :	$sudo usermod -a -G docker ec2-user 
-// then restart session
+   // then restart session
 6) $docker info
 ======================== Already Done in Previous Session ===================================================
 7) Install git:	$sudo yum install -y git
@@ -86,7 +86,7 @@ AWS ECS components
     ii) Get ec2 instance public IP: IPv4 Public IP
     iii) In browser, for example, 100.11.10.170:80
 15) After the build completes, tag your image:	
-docker tag tetranoodle:latest 133976391764.dkr.ecr.us-east-1.amazonaws.com/bryan:latest 
+    $docker tag tetranoodle:latest 133976391764.dkr.ecr.us-east-1.amazonaws.com/bryan:latest 
 16) Run the following command to push this image 
     i) Copy aws access to ec2 instance ~/.aws/config
     ii) $aws ecr get-login --region us-east-1 --no-include-email
