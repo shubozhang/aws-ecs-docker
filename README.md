@@ -77,11 +77,16 @@ AWS ECS components
 8) Clone the simple PHP application:	git clone https://github.com/awslabs/ecs-demo-php-simple-app
 9) Change directories:	cd ecs-demo-php-simple-app
 10) Examine the Dockerfile:	Cat Dockerfile
-11) Build your Docker image:	docker build -t tetranoodle .
+11) Build your Docker image:	docker build -t bryan .
+    i) Ignore the message "apache2: Cound not reliably determine the server's fully qualified domain name"
 12) Show Docker images	docker images
-13) Run the newly built image:	docker run -p 80:80 tetranoodle
-14) After the build completes, tag your image:	
+13) Run the newly built image:	docker run -p 80:80 bryan
+14) Test app
+    i) Allow access to port 80 of EC2 instance. Edit the Security Group -> Add inbound http.
+    ii) Get ec2 instance public IP: IPv4 Public IP
+    iii) In browser, for example, 100.11.10.170:80
+15) After the build completes, tag your image:	
 docker tag tetranoodle:latest 133976391764.dkr.ecr.us-east-1.amazonaws.com/tetranoodle:latest 
-15) Run the following command to push this image 
+16) Run the following command to push this image 
 docker push 133976391764.dkr.ecr.us-east-1.amazonaws.com/tetranoodle:latest
  ```
