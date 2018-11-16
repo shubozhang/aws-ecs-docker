@@ -6,7 +6,7 @@
 ### ECS-Wroking With Cluster
 ### ECS with Jenkins
 
-### AWS ECS
+### 1. AWS ECS
 * Easily manage clusters of any scale
 * Flexible container placement
 * Integrates with other AWS services
@@ -50,7 +50,7 @@ AWS ECS components
     * Elastic Load Balancing (traffic distribution)
     * Amazon EC2 Container Registry(ECR)
 
-### Docker Basics
+### 2. Docker Basics
 * Intro to docker
 * Installation and configuration of docker
 * AWS EC2 container registry
