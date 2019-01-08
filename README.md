@@ -12,8 +12,6 @@
 * Integrates with other AWS services
 * Extensible
 
-
-
 AWS ECS features:
 * Container and Images
 * Task Definition
@@ -81,6 +79,8 @@ To install Docker on an Amazon Linux instance:
     i) Ignore the message "apache2: Cound not reliably determine the server's fully qualified domain name"
 12) Show Docker images:	$docker images
 13) Run the newly built image:	$docker run -p 80:80 bryan
+    i) Open a new session to list running containers: $docker ps
+    ii) Check docker port: $sudo netstat -aulntp | grep 80
 14) Test app
     i) Allow access to port 80 of EC2 instance. Edit the Security Group -> Add inbound http.
     ii) Get ec2 instance public IP: IPv4 Public IP
