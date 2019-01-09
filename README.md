@@ -58,7 +58,11 @@ AWS ECS components
   * Import ppk to putty session
   * Start putty session
   * link: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html?icmpid=docs_ec2_console
-  
+
+* Choose an Amazon Machine Image
+```
+1) Enable "Auto-assign Public IP"
+```
   
 * Docker Basics 
  ```
@@ -93,3 +97,8 @@ To install Docker on an Amazon Linux instance:
     iii) Copy the return from ii) and run it
     iv) $docker push 133976391764.dkr.ecr.us-east-1.amazonaws.com/bryan:latest
  ```
+
+
+### AWS ECS Agent
+$ sudo sysctl -w net.ipv4.conf.all.route_localnet=1
+
